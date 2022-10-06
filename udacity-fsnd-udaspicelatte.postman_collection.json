@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "951aa618-009a-4321-a386-95f964259482",
+		"name": "udacity-fsnd-udaspicelatte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15980794"
+	},
+	"item": [
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "/genres",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drinks array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.drinks).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkpDMTJFa1p2Nnl0azcySy1iLUgxTyJ9.eyJpc3MiOiJodHRwczovL2Rldi1ydTduaW04cS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMzZWQxZDNhMTI3NTJmZjQ4ZmNmOGNhIiwiYXVkIjoiaHR0cDovLzEyNy4wLjAuMTo1MDAwLyIsImlhdCI6MTY2NTA3MDI1OCwiZXhwIjoxNjY1MDc3NDU4LCJhenAiOiI1dEtkWWhObWRLUGRSMDNBWXNYV3dFdUpJUW83VEZ4byIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmdlbnJlcyIsImdldDpib29rcyIsImdldDpib29rcy1kZXRhaWxzIiwiZ2V0OmdlbnJlcyIsInBvc3Q6Ym9va3MiLCJwb3N0OmdlbnJlcyJdfQ.Lc5t11SHlVJqfVFT_yqW6TDJT3qZSe54UY_1uUUpLErc3Lcd29OtzmizA7Fll4PtXsTgATiNsiyY_kQE5JPQk3aOoagqLULCGiQLmU7NmzR7C1t67a5xRJ59ulS_VozHlq8-ci7-_xSpGGsHsfmOVWT4k_6MPtH_CxtVfZspVJkD3NBIgvAer0BnxxDLC8maSxoV8jurBdkjtKW9r44MCNcj161QiXWOIqDfJakoNWlROK-Y0d5h4IG3sPvTC7bPzCzjV7q02-37bHy_jrGo0Yyi8l2RwkVbZnCvicXT5i_DwEbz6bpss6vTLAI275dYsi3zcQqVlrZRFsR2-n4_yA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/genres",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"genres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkpDMTJFa1p2Nnl0azcySy1iLUgxTyJ9.eyJpc3MiOiJodHRwczovL2Rldi1ydTduaW04cS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMzZWQxZDNhMTI3NTJmZjQ4ZmNmOGNhIiwiYXVkIjoiaHR0cDovLzEyNy4wLjAuMTo1MDAwLyIsImlhdCI6MTY2NTA3MDI1OCwiZXhwIjoxNjY1MDc3NDU4LCJhenAiOiI1dEtkWWhObWRLUGRSMDNBWXNYV3dFdUpJUW83VEZ4byIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmdlbnJlcyIsImdldDpib29rcyIsImdldDpib29rcy1kZXRhaWxzIiwiZ2V0OmdlbnJlcyIsInBvc3Q6Ym9va3MiLCJwb3N0OmdlbnJlcyJdfQ.Lc5t11SHlVJqfVFT_yqW6TDJT3qZSe54UY_1uUUpLErc3Lcd29OtzmizA7Fll4PtXsTgATiNsiyY_kQE5JPQk3aOoagqLULCGiQLmU7NmzR7C1t67a5xRJ59ulS_VozHlq8-ci7-_xSpGGsHsfmOVWT4k_6MPtH_CxtVfZspVJkD3NBIgvAer0BnxxDLC8maSxoV8jurBdkjtKW9r44MCNcj161QiXWOIqDfJakoNWlROK-Y0d5h4IG3sPvTC7bPzCzjV7q02-37bHy_jrGo0Yyi8l2RwkVbZnCvicXT5i_DwEbz6bpss6vTLAI275dYsi3zcQqVlrZRFsR2-n4_yA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/genres/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkpDMTJFa1p2Nnl0azcySy1iLUgxTyJ9.eyJpc3MiOiJodHRwczovL2Rldi1ydTduaW04cS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMzZWQxZDNhMTI3NTJmZjQ4ZmNmOGNhIiwiYXVkIjoiaHR0cDovLzEyNy4wLjAuMTo1MDAwLyIsImlhdCI6MTY2NTA3MDI1OCwiZXhwIjoxNjY1MDc3NDU4LCJhenAiOiI1dEtkWWhObWRLUGRSMDNBWXNYV3dFdUpJUW83VEZ4byIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmdlbnJlcyIsImdldDpib29rcyIsImdldDpib29rcy1kZXRhaWxzIiwiZ2V0OmdlbnJlcyIsInBvc3Q6Ym9va3MiLCJwb3N0OmdlbnJlcyJdfQ.Lc5t11SHlVJqfVFT_yqW6TDJT3qZSe54UY_1uUUpLErc3Lcd29OtzmizA7Fll4PtXsTgATiNsiyY_kQE5JPQk3aOoagqLULCGiQLmU7NmzR7C1t67a5xRJ59ulS_VozHlq8-ci7-_xSpGGsHsfmOVWT4k_6MPtH_CxtVfZspVJkD3NBIgvAer0BnxxDLC8maSxoV8jurBdkjtKW9r44MCNcj161QiXWOIqDfJakoNWlROK-Y0d5h4IG3sPvTC7bPzCzjV7q02-37bHy_jrGo0Yyi8l2RwkVbZnCvicXT5i_DwEbz6bpss6vTLAI275dYsi3zcQqVlrZRFsR2-n4_yA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/genres/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"genres",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/books/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403 since credentials are valid, but permission is not present\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkpDMTJFa1p2Nnl0azcySy1iLUgxTyJ9.eyJpc3MiOiJodHRwczovL2Rldi1ydTduaW04cS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMzZWQxZDNhMTI3NTJmZjQ4ZmNmOGNhIiwiYXVkIjoiaHR0cDovLzEyNy4wLjAuMTo1MDAwLyIsImlhdCI6MTY2NTA3MDI1OCwiZXhwIjoxNjY1MDc3NDU4LCJhenAiOiI1dEtkWWhObWRLUGRSMDNBWXNYV3dFdUpJUW83VEZ4byIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmdlbnJlcyIsImdldDpib29rcyIsImdldDpib29rcy1kZXRhaWxzIiwiZ2V0OmdlbnJlcyIsInBvc3Q6Ym9va3MiLCJwb3N0OmdlbnJlcyJdfQ.Lc5t11SHlVJqfVFT_yqW6TDJT3qZSe54UY_1uUUpLErc3Lcd29OtzmizA7Fll4PtXsTgATiNsiyY_kQE5JPQk3aOoagqLULCGiQLmU7NmzR7C1t67a5xRJ59ulS_VozHlq8-ci7-_xSpGGsHsfmOVWT4k_6MPtH_CxtVfZspVJkD3NBIgvAer0BnxxDLC8maSxoV8jurBdkjtKW9r44MCNcj161QiXWOIqDfJakoNWlROK-Y0d5h4IG3sPvTC7bPzCzjV7q02-37bHy_jrGo0Yyi8l2RwkVbZnCvicXT5i_DwEbz6bpss6vTLAI275dYsi3zcQqVlrZRFsR2-n4_yA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/books/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:5000",
+			"type": "string"
+		}
+	]
+}
